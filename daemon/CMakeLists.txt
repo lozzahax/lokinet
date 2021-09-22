@@ -40,5 +40,4 @@ else()
             install(CODE "execute_process(COMMAND setcap cap_net_admin,cap_net_bind_service=+eip ${CMAKE_INSTALL_PREFIX}/bin/lokinet)")
         endif()
     endif()
-    
 endif()
