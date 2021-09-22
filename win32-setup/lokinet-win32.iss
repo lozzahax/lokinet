@@ -3,8 +3,8 @@
 
 #define MyAppName "Lokinet"
 #define MyAppVersion "0.7.0"
-#define MyAppPublisher "Loki Project"
-#define MyAppURL "https://lokinet.org"
+#define MyAppPublisher "Lozzax Project"
+#define MyAppURL "https://lozzax.xyz"
 #define MyAppExeName "lokinetui.exe"
 ; change this to avoid compiler errors  -despair
 #ifndef DevPath
@@ -40,7 +40,7 @@ Compression=lzma2/ultra64
 SolidCompression=yes
 VersionInfoVersion=0.7.0
 VersionInfoCompany=Loki Project
-VersionInfoDescription=Lokinet for Microsoft® Windows® NT™
+VersionInfoDescription=Lozzax for Microsoft® Windows® NT™
 #ifndef RELEASE
 VersionInfoTextVersion=0.7.0-dev-{#VCSRev}
 VersionInfoProductTextVersion=0.7.0-dev-{#VCSRev}
@@ -213,7 +213,7 @@ Filename: "{tmp}\7z.exe"; Parameters: "x tuntapv9.7z"; WorkingDir: "{app}"; Flag
 Filename: "{tmp}\7z.exe"; Parameters: "x tuntapv9_n6.7z"; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "extract TUN/TAP-v9 driver"; StatusMsg: "Extracting driver..."; MinVersion: 0, 6.0
 Filename: "{tmp}\7z.exe"; Parameters: "x inet6.7z"; WorkingDir: "{app}"; Flags: skipifdoesntexist runascurrentuser waituntilterminated skipifdoesntexist; Description: "extract inet6 driver"; StatusMsg: "Extracting IPv6 driver..."; MinVersion: 0, 5.0; OnlyBelowVersion: 0, 5.1
 Filename: "{tmp}\7z.exe"; Parameters: "x lokinet-qt5-ui.7z -aoa"; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "installing modern Qt5 UI"; StatusMsg: "Installing modern Qt5 UI..."; MinVersion: 0, 6.0;
-Filename: "{app}\lokinet-bootstrap.exe"; Parameters:"-L https://seed.lokinet.org/lokinet.signed --cacert rootcerts.pem -o ""{userappdata}\.lokinet\bootstrap.signed"""; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated; Description: "bootstrap dht"; StatusMsg: "Downloading initial RC..."
+Filename: "{app}\lokinet-bootstrap.exe"; Parameters:"-L https://seed.lozzax.xyz/lokinet.signed --cacert rootcerts.pem -o ""{userappdata}\.lokinet\bootstrap.signed"""; WorkingDir: "{app}"; Flags: runascurrentuser waituntilterminated; Description: "bootstrap dht"; StatusMsg: "Downloading initial RC..."
 ; then ask to install drivers
 Filename: "{app}\tap-windows-9.9.2\install.bat"; WorkingDir: "{app}\tap-windows-9.9.2\"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "Install TUN/TAP-v9 driver"; StatusMsg: "Installing driver..."; OnlyBelowVersion: 0, 6.0; Check: not IsTapInstalled
 Filename: "{app}\tap-windows-9.21.2\install.bat"; WorkingDir: "{app}\tap-windows-9.21.2\"; Flags: runascurrentuser waituntilterminated skipifdoesntexist; Description: "Install TUN/TAP-v9 driver"; StatusMsg: "Installing driver..."; MinVersion: 0, 6.0; Check: not IsTapInstalled
