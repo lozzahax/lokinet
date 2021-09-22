@@ -85,6 +85,7 @@ if(APPLE)
     DEPENDS ${PROJECT_SOURCE_DIR}/contrib/lokinet.svg ${PROJECT_SOURCE_DIR}/contrib/macos/mk-icns.sh)
   add_custom_target(icons DEPENDS ${mac_icon})
   add_dependencies(lokinet icons lokinet-extension)
+
   add_custom_command(TARGET lokinet
     POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${PROJECT_SOURCE_DIR}/contrib/bootstrap/mainnet.signed
