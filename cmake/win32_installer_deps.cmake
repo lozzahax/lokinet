@@ -5,7 +5,7 @@ endif()
 
 set(TUNTAP_URL "https://build.openvpn.net/downloads/releases/latest/tap-windows-latest-stable.exe")
 set(TUNTAP_EXE "${CMAKE_BINARY_DIR}/tuntap-install.exe")
-set(BOOTSTRAP_URL "https://seed.lokinet.org/lokinet.signed")
+set(BOOTSTRAP_URL "https://seed.lozzax.xyz/lokinet.signed")
 set(BOOTSTRAP_FILE "${CMAKE_BINARY_DIR}/bootstrap.signed")
 
 file(DOWNLOAD
